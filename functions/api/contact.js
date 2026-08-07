@@ -44,7 +44,31 @@ export async function onRequestPost(context) {
       message
     )
     .run();
+    
+await fetch("https://api.web3forms.com/submit", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  body: JSON.stringify({
+    access_key: "e1cb087c-1bf0-43d7-9d7c-81dbfe2e3ac5",
+    subject: "New Lead Received - Digital Products Marketing",
+    from_name: "Digital Products Marketing",
 
+    name,
+    email,
+    phone,
+    company,
+    website,
+    social_link,
+    service,
+    budget,
+    country,
+    message
+  })
+});
+    
     return new Response(
       JSON.stringify({
         success: true,
