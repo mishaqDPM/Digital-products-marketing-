@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mishaqdpm.github.io/Digital-products-marketing-/sitemap.xml
