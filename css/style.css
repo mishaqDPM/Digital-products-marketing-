@@ -354,7 +354,7 @@ nav a{
 display:block;
 margin:10px 0;
 }
-*/
+
 .hero h1{
 font-size:34px;
 }
@@ -508,13 +508,13 @@ transform:translateY(-10px) scale(1.03);
 /* ===== Mobile ===== */
 @media (max-width:768px){
 
-  /*  .header .container{
+    .header .container{
         display:flex;
         flex-direction:row;
         justify-content:space-between;
         align-items:center;
     }
-*/
+
     .navbar{
         display:flex;
         flex-direction:row;
@@ -537,7 +537,7 @@ transform:translateY(-10px) scale(1.03);
 /* ===========================
    Mobile Responsive Navbar
 =========================== */
-/*
+
 #menuBtn{
     display:none;
     background:#00e5ff;
@@ -571,7 +571,7 @@ transform:translateY(-10px) scale(1.03);
         width:100%;
         border-bottom:1px solid rgba(255,255,255,.1);
     }
-*/
+
     .hero{
         padding-top:140px;
     }
@@ -659,10 +659,10 @@ transform:translateY(-10px) scale(1.03);
 
 @media (max-width:768px){
 
-    .menu-toggle{
+   /* .menu-toggle{
         display:block;
     }
-
+*/
     #navLinks{
         display:none;
         position:absolute;
@@ -686,7 +686,7 @@ transform:translateY(-10px) scale(1.03);
         border-bottom:1px solid rgba(255,255,255,.1);
     }
 }
-.menu-toggle{
+/*.menu-toggle{
     display:none;
     font-size:30px;
     color:#fff;
@@ -694,7 +694,7 @@ transform:translateY(-10px) scale(1.03);
     z-index:1001;
     position:relative;
 }
-
+*/
 @media(max-width:768px){
 
 #navLinks{
