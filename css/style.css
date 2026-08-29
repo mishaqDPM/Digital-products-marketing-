@@ -254,7 +254,7 @@ transform:translateY(0);
 
 /* Top Button */
 
-.top-btn{
+/*.top-btn{
 position:fixed;
 bottom:100px;
 right:20px;
@@ -270,7 +270,7 @@ display:none;
 z-index:999;
 }
 
-
+*/
 /* FAQ */
 
 .faq-box p{
@@ -339,7 +339,7 @@ color:#111;
 }
 */
 /* Mobile */
-
+/*
 @media(max-width:768px){
 
 header .container{
@@ -354,7 +354,7 @@ nav a{
 display:block;
 margin:10px 0;
 }
-
+*/
 .hero h1{
 font-size:34px;
 }
@@ -508,7 +508,7 @@ transform:translateY(-10px) scale(1.03);
 /* ===== Mobile ===== */
 @media (max-width:768px){
 
-    .header .container{
+/*    .header .container{
         display:flex;
         flex-direction:row;
         justify-content:space-between;
@@ -551,7 +551,7 @@ transform:translateY(-10px) scale(1.03);
 
 @media (max-width:768px){
 
-    .header .container{
+/*    .header .container{
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -571,7 +571,7 @@ transform:translateY(-10px) scale(1.03);
         width:100%;
         border-bottom:1px solid rgba(255,255,255,.1);
     }
-
+*/
     .hero{
         padding-top:140px;
     }
@@ -662,7 +662,7 @@ transform:translateY(-10px) scale(1.03);
     .menu-toggle{
         display:block;
     }
-
+/*
     #navLinks{
         display:none;
         position:absolute;
@@ -694,7 +694,7 @@ transform:translateY(-10px) scale(1.03);
     z-index:1001;
     position:relative;
 }
-*/
+
 @media(max-width:768px){
 
 #navLinks{
