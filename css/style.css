@@ -339,7 +339,7 @@ color:#111;
 }
 */
 /* Mobile */
-/*
+
 @media(max-width:768px){
 
 header .container{
@@ -445,7 +445,7 @@ transition:.4s;
 transform:translateY(-10px) scale(1.03);
 }
 /* ===== Header ===== */
-/*.header{
+.header{
     position:fixed;
     top:0;
     left:0;
@@ -486,7 +486,7 @@ transform:translateY(-10px) scale(1.03);
 .navbar a:hover{
     color:#00e5ff;
 }
-
+/*
 #theme-toggle{
     background:#00e5ff;
     border:none;
