@@ -62,7 +62,7 @@ color:#00e5ff;
 
 .navbar a:hover {
     color: #00bfff;
-}*/
+}
 .hero{
 height:100vh;
 display:flex;
@@ -444,7 +444,7 @@ transition:.4s;
 .stat-box:hover{
 transform:translateY(-10px) scale(1.03);
 }
-/* ===== Header ===== */
+/* ===== Header ===== *//*
 .header{
     position:fixed;
     top:0;
@@ -468,7 +468,7 @@ transform:translateY(-10px) scale(1.03);
     font-size:28px;
     font-weight:700;
 }
-
+*/
 .navbar{
     display:flex;
     gap:20px;
@@ -659,10 +659,10 @@ transform:translateY(-10px) scale(1.03);
 
 @media (max-width:768px){
 
-   /* .menu-toggle{
+    .menu-toggle{
         display:block;
     }
-*/
+
     #navLinks{
         display:none;
         position:absolute;
