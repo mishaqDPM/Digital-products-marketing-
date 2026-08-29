@@ -17,7 +17,7 @@ margin:auto;
 }
 
 
-/*.header{
+.header{
 position:fixed;
 top:0;
 width:100%;
@@ -27,11 +27,11 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-/*header .container{
+header .container{
 display:flex;
 justify-content:space-between;
 align-items:center;
-}*/
+}
 
 .logo{
 color:#00e5ff;
@@ -309,7 +309,7 @@ transform:rotate(360deg);
 }
 
 /* Theme Button */
-
+/*
 #theme-toggle{
 background:#00e5ff;
 border:none;
@@ -321,7 +321,7 @@ margin-left:20px;
 }
 
 /* Dark / Light */
-
+/*
 .light-mode{
 background:#ffffff;
 color:#111;
@@ -337,9 +337,9 @@ background:#ffffff;
 background:#f2f2f2;
 color:#111;
 }
-
+*/
 /* Mobile */
-
+/*
 @media(max-width:768px){
 
 header .container{
@@ -354,7 +354,7 @@ nav a{
 display:block;
 margin:10px 0;
 }
-
+*/
 .hero h1{
 font-size:34px;
 }
