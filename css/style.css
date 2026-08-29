@@ -17,7 +17,7 @@ margin:auto;
 }
 
 
-.header{
+/*.header{
 position:fixed;
 top:0;
 width:100%;
@@ -62,7 +62,7 @@ color:#00e5ff;
 
 .navbar a:hover {
     color: #00bfff;
-}
+}*/
 .hero{
 height:100vh;
 display:flex;
@@ -445,7 +445,7 @@ transition:.4s;
 transform:translateY(-10px) scale(1.03);
 }
 /* ===== Header ===== */
-.header{
+/*.header{
     position:fixed;
     top:0;
     left:0;
@@ -508,7 +508,7 @@ transform:translateY(-10px) scale(1.03);
 /* ===== Mobile ===== */
 @media (max-width:768px){
 
-    .header .container{
+  /*  .header .container{
         display:flex;
         flex-direction:row;
         justify-content:space-between;
@@ -537,7 +537,7 @@ transform:translateY(-10px) scale(1.03);
 /* ===========================
    Mobile Responsive Navbar
 =========================== */
-
+/*
 #menuBtn{
     display:none;
     background:#00e5ff;
@@ -571,7 +571,7 @@ transform:translateY(-10px) scale(1.03);
         width:100%;
         border-bottom:1px solid rgba(255,255,255,.1);
     }
-
+*/
     .hero{
         padding-top:140px;
     }
@@ -711,14 +711,14 @@ transform:translateY(-10px) scale(1.03);
     display:flex;
 }
 
-.menu-toggle{
+/*.menu-toggle{
     display:block;
     position:absolute;
     right:20px;
     top:20px;
     z-index:1002;
 }
-}
+}*/
 /* Premium Video Portfolio */
 
 .portfolio video{
