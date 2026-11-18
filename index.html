@@ -468,5 +468,104 @@ Book Your Free Business Growth Consultation </p>
   </footer>
 
   <script src="js/script-new.js"></script>
+
+  
+<!-- AI Live Chat Button -->
+<div id="ai-chat-button" onclick="toggleAIChat()">
+  💬 Chat with AI
+</div>
+
+<!-- AI Chat Window -->
+<div id="ai-chat-window">
+  <div class="ai-chat-header">
+    Digital Products Marketing
+    <button onclick="toggleAIChat()">×</button>
+  </div>
+
+  <div id="ai-chat-messages">
+    <p>Assalam-o-Alaikum! How can I help you today?</p>
+  </div>
+
+  <div class="ai-chat-input">
+    <input
+      type="text"
+      id="ai-message"
+      placeholder="Type your message..."
+    />
+    <button onclick="sendAIMessage()">Send</button>
+  </div>
+</div>
+
+<style>
+#ai-chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #1677ff;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+#ai-chat-window {
+  display: none;
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  width: 320px;
+  height: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  z-index: 9999;
+  overflow: hidden;
+}
+.ai-chat-header {
+  background: #1677ff;
+  color: white;
+  padding: 15px;
+}
+.ai-chat-header button {
+  float: right;
+}
+#ai-chat-messages {
+  height: 280px;
+  padding: 12px;
+  overflow-y: auto;
+  color: #222;
+}
+.ai-chat-input {
+  display: flex;
+  padding: 8px;
+}
+.ai-chat-input input {
+  width: 75%;
+  padding: 8px;
+}
+</style>
+
+<script>
+function toggleAIChat() {
+  const chat = document.getElementById("ai-chat-window");
+  chat.style.display =
+    chat.style.display === "block" ? "none" : "block";
+}
+
+function sendAIMessage() {
+  const input = document.getElementById("ai-message");
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  const messages = document.getElementById("ai-chat-messages");
+  const userMessage = document.createElement("p");
+  userMessage.textContent = "You: " + message;
+  messages.appendChild(userMessage);
+
+  input.value = "";
+}
+</script>
+
 </body>
 </html>
