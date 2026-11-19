@@ -555,6 +555,7 @@ function toggleAIChat() {
 }
 
 
+
 async function sendAIMessage() {
   const input = document.getElementById("ai-message");
   const message = input.value.trim();
@@ -574,18 +575,23 @@ async function sendAIMessage() {
   messages.appendChild(loading);
 
   try {
-    const webhookURL = "https://hook.eu1.make.com/hfyugsfgarzjcl3nmmp2dnytx17izdxw";
+    const response = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        message: message
+      })
+    });
 
-    const response = await fetch(
-      webhookURL + "?message=" + encodeURIComponent(message)
-    );
+    const result = await response.json();
 
-    if (!response.ok) {
-      throw new Error("Connection failed");
+    if (!response.ok || !result.success) {
+      throw new Error("AI connection failed");
     }
 
-    const answer = await response.text();
-    loading.textContent = "AI: " + answer;
+    loading.textContent = "AI: " + result.answer;
 
   } catch (error) {
     loading.textContent =
