@@ -605,6 +605,50 @@ async function sendAIMessage() {
       "Sorry, connection problem. Please try again.";
   }
 }
+  
+function startVoiceChat() {
+  const SpeechRecognition =
+    window.SpeechRecognition ||
+    window.webkitSpeechRecognition;
+
+  if (!SpeechRecognition) {
+    alert("Voice recognition is not supported. Please use Google Chrome.");
+    return;
+  }
+
+  const recognition = new SpeechRecognition();
+
+  recognition.lang = "en-US";
+  recognition.continuous = false;
+  recognition.interimResults = false;
+
+  recognition.onstart = function () {
+    document.getElementById("ai-voice-button").textContent =
+      "🎤 Listening...";
+  };
+
+  recognition.onresult = function (event) {
+    const spokenMessage =
+      event.results[0][0].transcript;
+
+    document.getElementById("ai-message").value =
+      spokenMessage;
+
+    sendAIMessage();
+  };
+
+  recognition.onerror = function () {
+    alert("Microphone error. Please allow microphone access.");
+  };
+
+  recognition.onend = function () {
+    document.getElementById("ai-voice-button").textContent =
+      "🎤 Speak";
+  };
+
+  recognition.start();
+}
+
 </script>
 
 </body>
