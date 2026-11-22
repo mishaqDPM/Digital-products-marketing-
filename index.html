@@ -486,14 +486,21 @@ Book Your Free Business Growth Consultation </p>
     <p>Assalam-o-Alaikum! How can I help you today?</p>
   </div>
 
-  <div class="ai-chat-input">
-    <input
-      type="text"
-      id="ai-message"
-      placeholder="Type your message..."
-    />
-    <button onclick="sendAIMessage()">Send</button>
-  </div>
+ 
+<div class="ai-chat-input">
+  <input
+    type="text"
+    id="ai-message"
+    placeholder="Type your message..."
+  />
+
+  <button onclick="sendAIMessage()">Send</button>
+
+  <button id="ai-voice-button" onclick="startVoiceChat()">
+    🎤 Speak
+  </button>
+</div>
+
 </div>
 
 <style>
