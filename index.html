@@ -554,6 +554,7 @@ Book Your Free Business Growth Consultation </p>
 }
 </style>
 
+
 <script>
 function toggleAIChat() {
   const chat = document.getElementById("ai-chat-window");
@@ -561,7 +562,44 @@ function toggleAIChat() {
     chat.style.display === "block" ? "none" : "block";
 }
 
+// AI jawab ko awaaz mein sunana
+function speakAI(text) {
+  if (!("speechSynthesis" in window)) {
+    console.log("Text-to-Speech is not supported.");
+    return;
+  }
 
+  const speech = window.speechSynthesis;
+
+  // Purani speech band karein
+  speech.cancel();
+
+  const answer = String(text || "").trim();
+  if (!answer) return;
+
+  const utterance = new SpeechSynthesisUtterance(answer);
+
+  // Urdu script ya English detect karein
+  const isUrdu = /[\u0600-\u06FF]/.test(answer);
+
+  utterance.lang = isUrdu ? "ur-PK" : "en-US";
+  utterance.rate = 1;
+  utterance.pitch = 1;
+
+  const voices = speech.getVoices();
+
+  const selectedVoice = voices.find(voice =>
+    voice.lang.toLowerCase().startsWith(
+      isUrdu ? "ur" : "en"
+    )
+  );
+
+  if (selectedVoice) {
+    utterance.voice = selectedVoice;
+  }
+
+  speech.speak(utterance);
+}
 
 async function sendAIMessage() {
   const input = document.getElementById("ai-message");
@@ -600,12 +638,15 @@ async function sendAIMessage() {
 
     loading.textContent = "AI: " + result.answer;
 
+    // AI ka jawab automatically bolna
+    speakAI(result.answer);
+
   } catch (error) {
     loading.textContent =
       "Sorry, connection problem. Please try again.";
   }
 }
-  
+
 function startVoiceChat() {
   const SpeechRecognition =
     window.SpeechRecognition ||
@@ -648,7 +689,6 @@ function startVoiceChat() {
 
   recognition.start();
 }
-
 </script>
 
 </body>
